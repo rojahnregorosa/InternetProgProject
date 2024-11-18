@@ -7,23 +7,41 @@ body {
     line-height: 1.6;
 }
 
+/* Header Styles */
 header {
-    background: #222;
-    color: #fff;
+    background: #fff; /* White background */
+    color: #222;
     padding: 1rem 0;
+    border-bottom: 1px solid #ddd; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header .logo {
     font-size: 1.5rem;
     font-weight: bold;
     margin-left: 20px;
+    color: #f76c6c; /* Red logo color */
+}
+
+header .logo:hover {
+    text-decoration: none;
+}
+
+header nav {
+    flex-grow: 1; /* Ensures the nav takes up available space */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header .nav-links {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
     margin-right: 20px;
+    justify-content: flex-end; /* Align links to the right */
+    flex-grow: 1; /* Push the nav-links to the right */
 }
 
 header .nav-links li {
@@ -32,84 +50,190 @@ header .nav-links li {
 
 header .nav-links a {
     text-decoration: none;
-    color: #fff;
+    color: #222; /* Black text for links */
     font-weight: bold;
 }
 
-header .nav-links a:hover {
+/* Target only standard navigation links */
+header .nav-links a:not(.btn-signup):not(.btn-signin):hover {
     color: #f76c6c;
 }
 
-.section {
-    padding: 2rem 1rem;
+header .btn-signin {
+    background: #fff;
+    color: #f76c6c;
+}
+
+header .btn-signup,
+header .btn-signin {
+    background: #f76c6c; 
+    color: #000; 
+    padding: 8px 16px;
+    border-radius: 5px; 
+    text-decoration: none;
+    transition: all 0.3s ease; 
+}
+
+/* Hover Effect */
+header .btn-signup:hover,
+header .btn-signin:hover {
+    opacity: 0.8;
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('images/01-GymPic.jpg') no-repeat center center/cover;
+    position: relative; /* Allows us to add an overlay */
+    color: #fff;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-#home {
-    background: url('images/home-bg.jpg') no-repeat center center/cover;
-    color: #fff;
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Dark Overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Increase opacity of overlay */
+    z-index: 1; /* Ensures the overlay appears below the text */
 }
 
-.cta .btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
+/* Content Styling */
+.hero h1,
+.hero p,
+.hero .btn {
+    position: relative; /* Ensures the text and button appear above the overlay */
+    z-index: 2; /* Places text and buttons above the overlay */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adds subtle shadow for readability */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Adds subtle shadow for readability */
+}
+
+.hero .btn {
     background: #f76c6c;
+    padding: 10px 20px;
+    border-radius: 5px;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    position: relative; /* Ensures button appears above overlay */
+    z-index: 2; /* Keeps button above the overlay */
 }
 
-.cta .btn:hover {
+.hero .btn:hover {
     background: #f44242;
 }
 
-.btn-secondary {
-    background: #222;
-}
-
-#services {
+/* Pricing Section */
+.pricing {
+    padding: 2rem 1rem;
     background: #f4f4f4;
+    text-align: center;
 }
 
-.services-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.pricing h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-.service-card {
-    background: #fff;
-    margin: 15px;
-    border-radius: 10px;
-    padding: 1rem;
-    max-width: 300px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: left;
+/* Pricing Table Container */
+.pricing-table-container {
+    overflow-x: auto; /* Ensures table is scrollable on small screens */
+    margin: 2rem auto;
+    max-width: 90%;
 }
 
-.service-card img {
+/* Table Styles */
+.pricing-table {
     width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
     border-radius: 10px;
+    overflow: hidden;
 }
 
+.pricing-table thead th {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.pricing-table tbody td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.pricing-table tbody tr:nth-child(even) {
+    background: #f9f9f9; /* Alternating row background */
+}
+
+.pricing-table tfoot td {
+    padding: 1rem;
+    border: none;
+}
+
+.pricing-table tfoot a.btn {
+    display: inline-block;
+    background: #f76c6c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.pricing-table tfoot a.btn:hover {
+    background: #f44242;
+}
+
+/* Table Header Background Colors */
+.pricing-table thead th {
+    background: #333; /* Dark background for all headers */
+    color: #fff; /* White text for all headers */
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Ensure 'Weekend' and 'Regular' columns are consistent */
+.pricing-table thead th:nth-child(2),
+.pricing-table thead th:nth-child(3) {
+    background: #333; /* Same dark background as 'Features' */
+    color: #fff; /* White text for consistency */
+}
+
+/* Premium Column Styling */
+.pricing-table thead th:nth-child(4) {
+    background: #f76c6c;; /* Red background for 'Premium' */
+    color: #fff; /* White text for contrast */
+}
+
+/* Footer */
 footer {
     background: #222;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
-}
-
-footer .social-icons img {
-    width: 25px;
-    margin: 0 10px;
-}
-
-footer .social-icons a {
-    color: #fff;
 }
