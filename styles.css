@@ -12,7 +12,7 @@ header {
     background: #fff; /* White background */
     color: #222;
     padding: 1rem 0;
-    border-bottom: 1px solid #ddd; /* Adds a slight divider below */
+    border-bottom: 1px solid #ddd; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,20 +54,9 @@ header .nav-links a {
     font-weight: bold;
 }
 
-header .nav-links a:hover {
+/* Target only standard navigation links */
+header .nav-links a:not(.btn-signup):not(.btn-signin):hover {
     color: #f76c6c; /* Red hover effect */
-}
-
-header .btn-signup,
-header .btn-signin {
-    background: #f76c6c;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 5px;
-    font-weight: bold;
-    border: 1px solid #f76c6c;
-    text-decoration: none;
-    transition: all 0.3s ease;
 }
 
 header .btn-signin {
@@ -75,15 +64,28 @@ header .btn-signin {
     color: #f76c6c;
 }
 
+header .btn-signup,
+header .btn-signin {
+    background: #f76c6c; 
+    color: #000; 
+    padding: 8px 16px;
+    border-radius: 5px; 
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease; 
+}
+
+/* Hover Effect */
 header .btn-signup:hover,
 header .btn-signin:hover {
-    background: #f44242; /* Darker red for hover */
-    color: #fff;
+    opacity: 0.8;
 }
+
 
 /* Hero Section */
 .hero {
     background: url('images/01-GymPic.jpg') no-repeat center center/cover;
+    position: relative; /* Allows us to add an overlay */
     color: #fff;
     min-height: 80vh;
     display: flex;
@@ -92,14 +94,37 @@ header .btn-signin:hover {
     text-align: center;
 }
 
+/* Dark Overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensures the overlay appears below the text */
+}
+
+/* Content Styling */
+.hero h1,
+.hero p,
+.hero .btn {
+    position: relative; /* Ensures the text and button appear above the overlay */
+    z-index: 2; /* Places text and buttons above the overlay */
+}
+
 .hero h1 {
     font-size: 2.5rem;
+    font-weight: bold;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adds subtle shadow for readability */
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Adds subtle shadow for readability */
 }
 
 .hero .btn {
@@ -108,6 +133,8 @@ header .btn-signin:hover {
     border-radius: 5px;
     color: #fff;
     text-decoration: none;
+    position: relative; /* Ensures button appears above overlay */
+    z-index: 2; /* Keeps button above the overlay */
 }
 
 .hero .btn:hover {
