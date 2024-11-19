@@ -5,24 +5,31 @@ body {
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
+    overflow-x: hidden;
+    /* Disables horizontal scrolling */
+    min-height: 1080px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header Styles */
 header {
-    background: #fff; /* White background */
+    background: #fff;
+    /* White background */
     color: #222;
-    padding: 1rem 0;
-    border-bottom: 1px solid #ddd; 
+    padding: 16px 0;
+    border-bottom: 1px solid #ddd;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 header .logo {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: bold;
     margin-left: 20px;
-    color: #f76c6c; /* Red logo color */
+    color: #f76c6c;
+    /* Red logo color */
 }
 
 header .logo:hover {
@@ -30,7 +37,8 @@ header .logo:hover {
 }
 
 header nav {
-    flex-grow: 1; /* Ensures the nav takes up available space */
+    flex-grow: 1;
+    /* Ensures the nav takes up available space */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,8 +48,10 @@ header .nav-links {
     list-style: none;
     display: flex;
     margin-right: 20px;
-    justify-content: flex-end; /* Align links to the right */
-    flex-grow: 1; /* Push the nav-links to the right */
+    justify-content: flex-end;
+    /* Align links to the right */
+    flex-grow: 1;
+    /* Push the nav-links to the right */
 }
 
 header .nav-links li {
@@ -50,43 +60,37 @@ header .nav-links li {
 
 header .nav-links a {
     text-decoration: none;
-    color: #222; /* Black text for links */
-    font-weight: bold;
+    color: #222;
 }
 
 /* Target only standard navigation links */
 header .nav-links a:not(.btn-signup):not(.btn-signin):hover {
     color: #f76c6c;
-}
-
-header .btn-signin {
-    background: #fff;
-    color: #f76c6c;
+    font-weight: 600;
 }
 
 header .btn-signup,
 header .btn-signin {
-    background: #f76c6c; 
-    color: #000; 
-    padding: 8px 16px;
-    border-radius: 5px; 
+    background: #f76c6c;
+    color: #000;
+    padding: 16px 16px;
+    border-radius: 5px;
     text-decoration: none;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
 
-/* Hover Effect */
 header .btn-signup:hover,
 header .btn-signin:hover {
-    opacity: 0.8;
+    font-weight: 600;
 }
-
 
 /* Hero Section */
 .hero {
     background: url('images/01-GymPic.jpg') no-repeat center center/cover;
-    position: relative; /* Allows us to add an overlay */
+    position: relative;
+    /* Allows us to add an overlay */
     color: #fff;
-    min-height: 80vh;
+    min-height: 864px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,61 +105,70 @@ header .btn-signin:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Increase opacity of overlay */
-    z-index: 1; /* Ensures the overlay appears below the text */
+    background: rgba(0, 0, 0, 0.7);
+    /* Increase opacity of overlay */
+    z-index: 1;
+    /* Ensures the overlay appears below the text */
 }
 
 /* Content Styling */
 .hero h1,
 .hero p,
 .hero .btn {
-    position: relative; /* Ensures the text and button appear above the overlay */
-    z-index: 2; /* Places text and buttons above the overlay */
+    position: relative;
+    /* Ensures the text and button appear above the overlay */
+    z-index: 2;
+    /* Places text and buttons above the overlay */
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 40px;
     font-weight: bold;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adds subtle shadow for readability */
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    /* Adds subtle shadow for readability */
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Adds subtle shadow for readability */
+    font-size: 19px;
+    margin-bottom: 24px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    /* Adds subtle shadow for readability */
 }
 
 .hero .btn {
-    background: #f76c6c;
-    padding: 10px 20px;
+    background: #f44242;
+    padding: 16px 32px;
     border-radius: 5px;
     color: #fff;
     text-decoration: none;
-    position: relative; /* Ensures button appears above overlay */
-    z-index: 2; /* Keeps button above the overlay */
+    position: relative;
+    /* Ensures button appears above overlay */
+    z-index: 2;
+    /* Keeps button above the overlay */
 }
 
 .hero .btn:hover {
-    background: #f44242;
+    background: #f76c6c;
 }
 
 /* Pricing Section */
 .pricing {
-    padding: 2rem 1rem;
+    padding: 32px 16px;
     background: #f4f4f4;
     text-align: center;
 }
 
 .pricing h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 32px;
+    margin-bottom: 16px;
 }
 
 /* Pricing Table Container */
 .pricing-table-container {
-    overflow-x: auto; /* Ensures table is scrollable on small screens */
-    margin: 2rem auto;
+    overflow-x: auto;
+    /* Ensures table is scrollable on small screens */
+    margin: 32px auto;
     max-width: 90%;
 }
 
@@ -175,22 +188,23 @@ header .btn-signin:hover {
 .pricing-table thead th {
     background: #333;
     color: #fff;
-    padding: 1rem;
-    font-size: 1.2rem;
+    padding: 16px;
+    font-size: 19px;
 }
 
 .pricing-table tbody td {
-    padding: 1rem;
+    padding: 16px;
     border: 1px solid #ddd;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 .pricing-table tbody tr:nth-child(even) {
-    background: #f9f9f9; /* Alternating row background */
+    background: #f9f9f9;
+    /* Alternating row background */
 }
 
 .pricing-table tfoot td {
-    padding: 1rem;
+    padding: 16px;
     border: none;
 }
 
@@ -198,7 +212,7 @@ header .btn-signin:hover {
     display: inline-block;
     background: #f76c6c;
     color: #fff;
-    padding: 10px 20px;
+    padding: 16px 32px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -211,29 +225,232 @@ header .btn-signin:hover {
 
 /* Table Header Background Colors */
 .pricing-table thead th {
-    background: #333; /* Dark background for all headers */
-    color: #fff; /* White text for all headers */
-    padding: 1rem;
-    font-size: 1.2rem;
+    background: #333;
+    /* Dark background for all headers */
+    color: #fff;
+    /* White text for all headers */
+    padding: 16px;
+    font-size: 19px;
 }
 
 /* Ensure 'Weekend' and 'Regular' columns are consistent */
 .pricing-table thead th:nth-child(2),
 .pricing-table thead th:nth-child(3) {
-    background: #333; /* Same dark background as 'Features' */
-    color: #fff; /* White text for consistency */
+    background: #333;
+    /* Same dark background as 'Features' */
+    color: #fff;
+    /* White text for consistency */
 }
 
 /* Premium Column Styling */
 .pricing-table thead th:nth-child(4) {
-    background: #f76c6c;; /* Red background for 'Premium' */
-    color: #fff; /* White text for contrast */
+    background: #f76c6c;
+    /* Red background for 'Premium' */
+    color: #fff;
+    /* White text for contrast */
+}
+
+/* Reasons section */
+.reasons-section {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    /* Make the section occupy full height */
+    background-color: #fff;
+    align-items: center;
+}
+
+.reasons-content {
+    width: 50%;
+    /* Left side occupies half the width */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Centers all content horizontally */
+    text-align: center;
+}
+
+.reasons-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f76c6c;
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Add slight shadow for better visibility */
+}
+
+.reasons-content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.reasons-content ul li {
+    margin-bottom: 8px;
+    font-size: 18px;
+    /* Adjust text size */
+    margin-bottom: 12px;
+    /* Add spacing between list items */
+    color: #000;
+    /* Black text for readability */
+    display: flex;
+    align-items: center;
+    /* Align the checkmark and text vertically */
+}
+
+.reasons-content .btn-red {
+    align-self: center;
+    background: #f76c6c;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.reasons-content .btn-red:hover {
+    background: #f44242;
+    transform: scale(1.05);
+}
+
+.reasons-image {
+    width: 50%;
+    /* Right side occupies half the width */
+    height: 100%;
+    /* Stretch the image to fill the container */
+    display: flex;
+}
+
+.reasons-image img {
+    width: 100%;
+    /* Ensure the image fills its container */
+    height: 100%;
+    /* Stretch the image to fill height */
+    object-fit: cover;
+    /* Maintain the aspect ratio and cover the area */
+}
+
+/* Subscribe section */
+.subscribe-section {
+    background-color: #f76c6c;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0;
+    margin: 0px;
+    width: 100%;
+    /* Make the section span the entire width */
+}
+
+.subscribe-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Center the content inside the section */
+}
+
+.subscribe-container h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* Add spacing between input and button */
+}
+
+.subscribe-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    flex: 1;
+    /* Allow input to grow */
+    max-width: 400px;
+}
+
+.subscribe-form button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subscribe-form button:hover {
+    background-color: #333;
+    /* Darker black on hover */
 }
 
 /* Footer */
 footer {
-    background: #222;
-    color: #fff;
-    padding: 1rem 0;
+    background-color: #f4f4f4;
+    /* Light gray background */
+    color: #000;
+    /* Black text */
     text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Ensure responsive layout */
+    justify-content: center;
+    /* Center the columns horizontally */
+    gap: 20px;
+    /* Add spacing between columns */
+    max-width: 1200px;
+    /* Limit the max width */
+    margin: 0 auto;
+    /* Center the footer container */
+    text-align: center;
+    /* Center the text inside each column */
+    padding-bottom: 35px;
+}
+
+.footer-column {
+    flex: 1;
+    /* Distribute space evenly between columns */
+    min-width: 200px;
+    /* Ensure columns have a minimum width */
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    font-size: 14px;
+    color: #666;
+    /* Text color */
+    background-color: #000;
+    /* Solid black background */
+    padding: 20px 0;
+    /* Padding inside the footer */
+}
+
+.footer-bottom p {
+    margin: 0;
+    /* Remove any default margin around the paragraph */
 }
