@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Home</title>
+    <title>Services</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
     <script src='main.js'></script>
@@ -17,36 +18,134 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About Us</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#signup" class="btn-signup">Sign Up</a></li>
+                <li><a href="#signin" class="btn-signin">Sign In</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="services" class="section">
-        <h2>Our Services</h2>
-        <div class="services-container">
+    <main>
+        <!-- Hero Section -->
+        <section id="services-hero" class="services-hero">
+            <div class="services-hero-content">
+                <h1>Services</h1>
+                <p>Interested? Be a part of our community and experience all we offer!</p>
+                <a href="#pricing" class="btn">Get Started</a>
+            </div>
+        </section>
+
+        <!-- Services section -->
+        <section class="services-section">
+            <!-- First Row -->
             <div class="service-card">
-                <img src="images/yoga.jpg" alt="Yoga Class">
-                <h3>Yoga Classes</h3>
-                <p>Find balance and flexibility in our yoga sessions.</p>
+                <div class="service-content">
+                    <h3>Spinning Studio</h3>
+                    <p>Enjoy a competitive fitness experience featuring the latest technology in a dynamic group fitness
+                        environment.</p>
+                </div>
+                <div class="service-image">
+                    <img src="images/02-GymPic.jpg" alt="Spinning Studio">
+                </div>
             </div>
             <div class="service-card">
-                <img src="images/weightlifting.jpg" alt="Weight Lifting">
-                <h3>Weight Lifting</h3>
-                <p>Build strength with our advanced equipment.</p>
+                <div class="service-image">
+                    <img src="images/02-GymPic.jpg" alt="Unlimited Group Classes">
+                </div>
+                <div class="service-content">
+                    <h3>Unlimited Group Classes</h3>
+                    <p>Take advantage of group classes tailored to all fitness levels, led by certified trainers.</p>
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="service-card">
+                <div class="service-content">
+                    <h3>Small Group Training</h3>
+                    <p>Participate in small group training sessions for personalized attention and camaraderie.</p>
+                </div>
+                <div class="service-image">
+                    <img src="images/02-GymPic.jpg" alt="Small Group Training">
+                </div>
             </div>
             <div class="service-card">
-                <img src="images/cardio.jpg" alt="Cardio Training">
-                <h3>Cardio Training</h3>
-                <p>Boost your endurance with our cardio workouts.</p>
+                <div class="service-image">
+                    <img src="images/02-GymPic.jpg" alt="Yoga">
+                </div>
+                <div class="service-content">
+                    <h3>Yoga</h3>
+                    <p>Strengthen your body and mind with yoga classes that promote wellness and flexibility.</p>
+                </div>
             </div>
-        </div>
-    </section>
+
+            <!-- Third Row -->
+            <div class="service-card">
+                <div class="service-content">
+                    <h3>Personal Training</h3>
+                    <p>Work one-on-one with certified trainers to create a fitness plan tailored to your goals.</p>
+                </div>
+                <div class="service-image">
+                    <img src="images/02-GymPic.jpg" alt="Personal Training">
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="images/02-GymPic.jpg" alt="Cardio Training">
+                </div>
+                <div class="service-content">
+                    <h3>Cardio Training</h3>
+                    <p>Boost your endurance and cardiovascular health with our state-of-the-art equipment and training
+                        programs.</p>
+                </div>
+            </div>
+
+            <!-- Fourth Row -->
+            <div class="service-card">
+                <div class="service-content">
+                    <h3>Strength Training</h3>
+                    <p>Build muscle and increase strength with our cutting-edge equipment and coaching.</p>
+                </div>
+                <div class="service-image">
+                    <img src="images/02-GymPic.jpg" alt="Strength Training">
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="images/02-GymPic.jpg" alt="Nutrition Coaching">
+                </div>
+                <div class="service-content">
+                    <h3>Nutrition Coaching</h3>
+                    <p>Get expert advice on meal planning and healthy eating to complement your fitness journey.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <div class="footer-content">
-            <p>Contact us: info@ignitegym.com | Phone: (123) 456-7890</p>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>MONTREAL</h4>
+                <p>123 Boulevard Cote-Vertu Ouest, Suite C-35,<br> Saint-Laurent, QC H4R 1Y8, CA</p>
+                <p>(123)123-123</p>
+                <p>info.vsl@ignitegymqc.com</p>
+            </div>
+            <div class="footer-column">
+                <h4>LAVAL</h4>
+                <p>123 Service Street O<br>Laval, QC H7X 4C9, CA</p>
+                <p>(123)123-123</p>
+                <p>info.lvl@ignitegymqc.com</p>
+            </div>
+            <div class="footer-column">
+                <h4>OPENING HOURS</h4>
+                <p>Platinum members: 24/7<br><br>Non platinum members:<br>Monday - Friday: 5h30 - 23h00<br>Weekend: 7h30
+                    - 20h30</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © Ignite Gym. All rights reserved.</p>
         </div>
     </footer>
 </body>
+
 </html>

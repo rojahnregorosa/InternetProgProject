@@ -22,10 +22,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0; /* Position it at the very top of the viewport */
+    left: 0; /* Align it to the left edge */
+    width: 100%; /* Ensure it spans the full width of the page */
+    z-index: 1000; /* Ensure it stays above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
 }
 
 header .logo {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
     margin-left: 20px;
     color: #f76c6c;
@@ -58,7 +64,7 @@ header .nav-links li {
     margin: 0 15px;
 }
 
-header .nav-links a {
+header .nav-links a:not(.btn-signup):not(.btn-signin) {
     text-decoration: none;
     color: #222;
 }
@@ -71,8 +77,8 @@ header .nav-links a:not(.btn-signup):not(.btn-signin):hover {
 
 header .btn-signup,
 header .btn-signin {
-    background: #f76c6c;
-    color: #000;
+    background: #f44242;
+    color: #fff;
     padding: 16px 16px;
     border-radius: 5px;
     text-decoration: none;
@@ -81,7 +87,7 @@ header .btn-signin {
 
 header .btn-signup:hover,
 header .btn-signin:hover {
-    font-weight: 600;
+    background: #f76c6c;
 }
 
 /* Hero Section */
@@ -106,9 +112,7 @@ header .btn-signin:hover {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
-    /* Increase opacity of overlay */
     z-index: 1;
-    /* Ensures the overlay appears below the text */
 }
 
 /* Content Styling */
@@ -116,9 +120,7 @@ header .btn-signin:hover {
 .hero p,
 .hero .btn {
     position: relative;
-    /* Ensures the text and button appear above the overlay */
     z-index: 2;
-    /* Places text and buttons above the overlay */
 }
 
 .hero h1 {
@@ -126,7 +128,6 @@ header .btn-signin:hover {
     font-weight: bold;
     margin-bottom: 16px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    /* Adds subtle shadow for readability */
 }
 
 .hero p {
@@ -143,12 +144,70 @@ header .btn-signin:hover {
     color: #fff;
     text-decoration: none;
     position: relative;
-    /* Ensures button appears above overlay */
     z-index: 2;
-    /* Keeps button above the overlay */
 }
 
 .hero .btn:hover {
+    background: #f76c6c;
+}
+
+.services-hero {
+    background: url('images/04-GymPic.jpg') no-repeat center center/cover;
+    position: relative;
+    /* Allows us to add an overlay */
+    color: #fff;
+    min-height: 864px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Dark Overlay */
+.services-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+/* Content Styling */
+.services-hero h1,
+.services-hero p,
+.services-hero .btn {
+    position: relative;
+    z-index: 2;
+}
+
+.services-hero h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.services-hero p {
+    font-size: 19px;
+    margin-bottom: 24px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    /* Adds subtle shadow for readability */
+}
+
+.services-hero .btn {
+    background: #f44242;
+    padding: 16px 32px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+
+.services-hero .btn:hover {
     background: #f76c6c;
 }
 
@@ -392,6 +451,68 @@ header .btn-signin:hover {
 .subscribe-form button:hover {
     background-color: #333;
     /* Darker black on hover */
+}
+
+/* Services page */
+/* General Styles for Main */
+.services-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 40px 20px;
+}
+
+.service-card {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.service-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.service-content h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .services-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card {
+        flex-direction: row;
+    }
+
+    .service-image img {
+        width: 300px;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 /* Footer */
