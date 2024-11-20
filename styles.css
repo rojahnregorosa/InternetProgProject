@@ -416,6 +416,67 @@ header .btn-signin:hover {
     }
 }
 
+/* About Us Page */
+.about-us-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    gap: 20px;
+}
+
+.about-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.about-content h4 {
+    font-size: 36px;
+    color: #f76c6c;
+    margin-bottom: 10px;
+}
+
+.about-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.btn-explore {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f76c6c;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.btn-explore:hover {
+    background-color: #f44242;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 600px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
 /* Footer */
 footer {
     background-color: #f4f4f4; /* Light gray background */
