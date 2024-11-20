@@ -5,8 +5,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
-    overflow-x: hidden;
-    /* Disables horizontal scrolling */
+    overflow-x: hidden; /* Disables horizontal scrolling */
     min-height: 1080px;
     display: flex;
     flex-direction: column;
@@ -15,16 +14,10 @@ body {
 /* Header Styles */
 header {
     background: #fff;
-    /* White background */
     color: #222;
     padding: 16px 0;
     border-bottom: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: fixed;
-    top: 0; /* Position it at the very top of the viewport */
-    left: 0; /* Align it to the left edge */
     width: 100%; /* Ensure it spans the full width of the page */
     z-index: 1000; /* Ensure it stays above other elements */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
@@ -35,7 +28,6 @@ header .logo {
     font-weight: bold;
     margin-left: 20px;
     color: #f76c6c;
-    /* Red logo color */
 }
 
 header .logo:hover {
@@ -43,21 +35,14 @@ header .logo:hover {
 }
 
 header nav {
-    flex-grow: 1;
-    /* Ensures the nav takes up available space */
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 header .nav-links {
     list-style: none;
     display: flex;
     margin-right: 20px;
-    justify-content: flex-end;
-    /* Align links to the right */
-    flex-grow: 1;
-    /* Push the nav-links to the right */
 }
 
 header .nav-links li {
@@ -93,8 +78,7 @@ header .btn-signin:hover {
 /* Hero Section */
 .hero {
     background: url('images/01-GymPic.jpg') no-repeat center center/cover;
-    position: relative;
-    /* Allows us to add an overlay */
+    position: relative; /* Allows us to add an overlay */
     color: #fff;
     min-height: 864px;
     display: flex;
@@ -107,12 +91,9 @@ header .btn-signin:hover {
 .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
-    z-index: 1;
 }
 
 /* Content Styling */
@@ -120,7 +101,6 @@ header .btn-signin:hover {
 .hero p,
 .hero .btn {
     position: relative;
-    z-index: 2;
 }
 
 .hero h1 {
@@ -133,8 +113,7 @@ header .btn-signin:hover {
 .hero p {
     font-size: 19px;
     margin-bottom: 24px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-    /* Adds subtle shadow for readability */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Adds subtle shadow for readability */
 }
 
 .hero .btn {
@@ -143,8 +122,6 @@ header .btn-signin:hover {
     border-radius: 5px;
     color: #fff;
     text-decoration: none;
-    position: relative;
-    z-index: 2;
 }
 
 .hero .btn:hover {
@@ -153,8 +130,7 @@ header .btn-signin:hover {
 
 .services-hero {
     background: url('images/04-GymPic.jpg') no-repeat center center/cover;
-    position: relative;
-    /* Allows us to add an overlay */
+    position: relative; /* Allows us to add an overlay */
     color: #fff;
     min-height: 864px;
     display: flex;
@@ -167,12 +143,9 @@ header .btn-signin:hover {
 .services-hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
-    z-index: 1;
 }
 
 /* Content Styling */
@@ -180,7 +153,6 @@ header .btn-signin:hover {
 .services-hero p,
 .services-hero .btn {
     position: relative;
-    z-index: 2;
 }
 
 .services-hero h1 {
@@ -193,8 +165,7 @@ header .btn-signin:hover {
 .services-hero p {
     font-size: 19px;
     margin-bottom: 24px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-    /* Adds subtle shadow for readability */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Adds subtle shadow for readability */
 }
 
 .services-hero .btn {
@@ -203,8 +174,6 @@ header .btn-signin:hover {
     border-radius: 5px;
     color: #fff;
     text-decoration: none;
-    position: relative;
-    z-index: 2;
 }
 
 .services-hero .btn:hover {
@@ -225,8 +194,7 @@ header .btn-signin:hover {
 
 /* Pricing Table Container */
 .pricing-table-container {
-    overflow-x: auto;
-    /* Ensures table is scrollable on small screens */
+    overflow-x: auto; /* Ensures table is scrollable on small screens */
     margin: 32px auto;
     max-width: 90%;
 }
@@ -235,20 +203,7 @@ header .btn-signin:hover {
 .pricing-table {
     width: 100%;
     border-collapse: collapse;
-    text-align: center;
-    margin: 0 auto;
     background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.pricing-table thead th {
-    background: #333;
-    color: #fff;
-    padding: 16px;
-    font-size: 19px;
 }
 
 .pricing-table tbody td {
@@ -258,13 +213,11 @@ header .btn-signin:hover {
 }
 
 .pricing-table tbody tr:nth-child(even) {
-    background: #f9f9f9;
-    /* Alternating row background */
+    background: #f9f9f9; /* Alternating row background */
 }
 
 .pricing-table tfoot td {
     padding: 16px;
-    border: none;
 }
 
 .pricing-table tfoot a.btn {
@@ -284,84 +237,53 @@ header .btn-signin:hover {
 
 /* Table Header Background Colors */
 .pricing-table thead th {
-    background: #333;
-    /* Dark background for all headers */
+    background: #333; /* Dark background for all headers */
     color: #fff;
-    /* White text for all headers */
     padding: 16px;
     font-size: 19px;
 }
 
-/* Ensure 'Weekend' and 'Regular' columns are consistent */
-.pricing-table thead th:nth-child(2),
-.pricing-table thead th:nth-child(3) {
-    background: #333;
-    /* Same dark background as 'Features' */
-    color: #fff;
-    /* White text for consistency */
-}
-
 /* Premium Column Styling */
 .pricing-table thead th:nth-child(4) {
-    background: #f76c6c;
-    /* Red background for 'Premium' */
+    background: #f76c6c; /* Red background for 'Premium' */
     color: #fff;
-    /* White text for contrast */
 }
 
 /* Reasons section */
 .reasons-section {
     display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    height: 100%;
-    /* Make the section occupy full height */
-    background-color: #fff;
     align-items: center;
 }
 
 .reasons-content {
-    width: 50%;
-    /* Left side occupies half the width */
+    width: 50%; /* Left side occupies half the width */
     padding: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* Centers all content horizontally */
-    text-align: center;
+    align-items: center; /* Centers all content horizontally */
 }
 
 .reasons-content h1 {
     font-size: 36px;
-    font-weight: bold;
     color: #f76c6c;
     margin-bottom: 16px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    /* Add slight shadow for better visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add slight shadow for better visibility */
 }
 
 .reasons-content ul {
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
 .reasons-content ul li {
-    margin-bottom: 8px;
-    font-size: 18px;
-    /* Adjust text size */
-    margin-bottom: 12px;
-    /* Add spacing between list items */
-    color: #000;
-    /* Black text for readability */
+    font-size: 18px; 
+    margin-bottom: 12px; 
+    color: #000; 
     display: flex;
-    align-items: center;
-    /* Align the checkmark and text vertically */
+    align-items: center; 
 }
 
 .reasons-content .btn-red {
-    align-self: center;
     background: #f76c6c;
     color: #fff;
     padding: 8px 16px;
@@ -378,20 +300,14 @@ header .btn-signin:hover {
 }
 
 .reasons-image {
-    width: 50%;
-    /* Right side occupies half the width */
-    height: 100%;
-    /* Stretch the image to fill the container */
+    width: 50%; /* Right side occupies half the width */
+    height: 100%; /* Stretch the image to fill the container */
     display: flex;
 }
 
 .reasons-image img {
-    width: 100%;
-    /* Ensure the image fills its container */
-    height: 100%;
-    /* Stretch the image to fill height */
-    object-fit: cover;
-    /* Maintain the aspect ratio and cover the area */
+    width: 100%; /* Ensure the image fills its container */
+    height: 100%; 
 }
 
 /* Subscribe section */
@@ -400,16 +316,12 @@ header .btn-signin:hover {
     color: #fff;
     text-align: center;
     padding: 20px;
-    border-radius: 0;
-    margin: 0px;
-    width: 100%;
-    /* Make the section span the entire width */
+    width: 100%; /* Make the section span the entire width */
 }
 
 .subscribe-container {
     max-width: 1200px;
-    margin: 0 auto;
-    /* Center the content inside the section */
+    margin: 0 auto; /* Center the content inside the section */
 }
 
 .subscribe-container h2 {
@@ -423,8 +335,7 @@ header .btn-signin:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    /* Add spacing between input and button */
+    gap: 10px; /* Add spacing between input and button */
 }
 
 .subscribe-form input {
@@ -432,8 +343,7 @@ header .btn-signin:hover {
     border: none;
     border-radius: 4px;
     font-size: 16px;
-    flex: 1;
-    /* Allow input to grow */
+    flex: 1; /* Allow input to grow */
     max-width: 400px;
 }
 
@@ -449,17 +359,15 @@ header .btn-signin:hover {
 }
 
 .subscribe-form button:hover {
-    background-color: #333;
-    /* Darker black on hover */
+    background-color: #333; /* Darker black on hover */
 }
 
 /* Services page */
 /* General Styles for Main */
 .services-section {
     display: grid;
-    grid-template-columns: 1fr;
     gap: 30px;
-    max-width: 1200px;
+    max-width: 1350px;
     margin: 0 auto;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -468,8 +376,6 @@ header .btn-signin:hover {
 
 .service-card {
     display: flex;
-    flex-wrap: wrap;
-    background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -478,24 +384,19 @@ header .btn-signin:hover {
 .service-image img {
     width: 100%;
     height: auto;
-    object-fit: cover;
 }
 
 .service-content {
-    flex: 1;
     padding: 20px;
 }
 
 .service-content h3 {
     font-size: 20px;
-    font-weight: bold;
-    color: #333;
     margin-bottom: 10px;
 }
 
 .service-content p {
     color: #666;
-    line-height: 1.6;
 }
 
 /* Responsive Design */
@@ -517,42 +418,26 @@ header .btn-signin:hover {
 
 /* Footer */
 footer {
-    background-color: #f4f4f4;
-    /* Light gray background */
-    color: #000;
-    /* Black text */
+    background-color: #f4f4f4; /* Light gray background */
     text-align: center;
     font-family: Arial, sans-serif;
-    margin-top: auto;
 }
 
 .footer-container {
     display: flex;
-    flex-wrap: wrap;
-    /* Ensure responsive layout */
     justify-content: center;
-    /* Center the columns horizontally */
     gap: 20px;
-    /* Add spacing between columns */
-    max-width: 1200px;
-    /* Limit the max width */
-    margin: 0 auto;
-    /* Center the footer container */
-    text-align: center;
-    /* Center the text inside each column */
+    max-width: 1350px; /* Limit the max width */
+    margin: 0 auto; /* Center the footer container */
     padding-bottom: 35px;
 }
 
 .footer-column {
-    flex: 1;
-    /* Distribute space evenly between columns */
-    min-width: 200px;
-    /* Ensure columns have a minimum width */
+    flex: 1; /* Distribute space evenly between columns */
 }
 
 .footer-column h4 {
     font-size: 18px;
-    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -563,15 +448,11 @@ footer {
 
 .footer-bottom {
     font-size: 14px;
-    color: #666;
-    /* Text color */
-    background-color: #000;
-    /* Solid black background */
-    padding: 20px 0;
-    /* Padding inside the footer */
+    color: #666; 
+    background-color: #000; 
+    padding: 20px 0; 
 }
 
 .footer-bottom p {
-    margin: 0;
-    /* Remove any default margin around the paragraph */
+    margin: 0; /* Remove any default margin around the paragraph */
 }
