@@ -78,7 +78,7 @@ header .btn-signin:hover {
 /* Hero Section */
 .hero {
     background: url('images/01-GymPic.jpg') no-repeat center center/cover;
-    position: relative; /* Allows us to add an overlay */
+    position: relative; /* Allows to add an overlay */
     color: #fff;
     min-height: 864px;
     display: flex;
@@ -96,7 +96,6 @@ header .btn-signin:hover {
     background: rgba(0, 0, 0, 0.7);
 }
 
-/* Content Styling */
 .hero h1,
 .hero p,
 .hero .btn {
@@ -328,7 +327,6 @@ header .btn-signin:hover {
 }
 
 /* Services page */
-/* General Styles for Main */
 .services-section {
     display: grid;
     gap: 30px;
