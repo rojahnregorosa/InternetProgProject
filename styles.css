@@ -142,7 +142,7 @@ header .btn-signin:hover {
 }
 
 .contact-hero {
-    background: url('images/15-GymPic.jpg') no-repeat center center/cover;
+    background: url('images/14-GymPic.jpg') no-repeat center center/cover;
 }
 
 /* Pricing Section */
@@ -467,7 +467,6 @@ header .btn-signin:hover {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #333;
 }
 
 .form-group input,
@@ -483,7 +482,7 @@ textarea {
     resize: none;
 }
 
-.btn {
+.submit-btn {
     background: #f44242;
     color: #fff;
     padding: 10px 20px;
@@ -494,7 +493,7 @@ textarea {
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.submit-btn:hover {
     background: #f76c6c;
 }
 
