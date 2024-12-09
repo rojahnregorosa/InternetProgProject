@@ -504,7 +504,7 @@ textarea {
     background-color: #f4f4f4;
 }
 
-form {
+#signUpForm {
     width: 400px;
     padding: 20px;
     background-color: #fff;
@@ -512,13 +512,13 @@ form {
     border-radius: 8px;
 }
 
-form h2 {
+#signUpForm h2 {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-form input {
+#signUpForm input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -527,7 +527,7 @@ form input {
     box-sizing: border-box;
 }
 
-form button {
+#signUpForm button {
     width: 100%;
     padding: 10px;
     background-color: #4CAF50;
@@ -538,7 +538,7 @@ form button {
     font-size: 16px;
 }
 
-form a {
+#signUpForm a {
     display: block;
     text-align: center;
     margin-top: 15px;
@@ -546,8 +546,56 @@ form a {
     color: #4CAF50;
 }
 
-/* Sign in page */
+/* Sign In Page */
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
 
+#signInForm {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#signInForm h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#signInForm input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#signInForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#signInForm a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #4CAF50;
+}
 
 /* Footer */
 footer {
