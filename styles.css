@@ -725,8 +725,7 @@ textarea {
     margin: 10px 0;
 }
 
-.btn-upgrade,
-.btn-renew {
+.btn-upgrade {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -736,8 +735,7 @@ textarea {
     margin: 10px;
 }
 
-.btn-upgrade:hover,
-.btn-renew:hover {
+.btn-upgrade:hover {
     background-color: #45a049;
 }
 
@@ -745,6 +743,10 @@ textarea {
     color: #f76c6c;
     text-decoration: none;
     font-weight: bold;
+}
+
+.download-link:hover {
+    color: #7e1313;
 }
 
 /* Footer */
