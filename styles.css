@@ -516,34 +516,65 @@ textarea {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
+    color: #333;
 }
 
-#signUpForm input {
+/* Input Fields */
+#signUpForm input,
+#signUpForm select {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
+/* Input Focus */
+#signUpForm input:focus,
+#signUpForm select:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Dropdown Styling */
+#signUpForm select {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Submit Button */
 #signUpForm button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
+#signUpForm button:hover {
+    background-color: #45a049;
+}
+
+/* Link Styling */
 #signUpForm a {
     display: block;
     text-align: center;
     margin-top: 15px;
     text-decoration: none;
     color: #4CAF50;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#signUpForm a:hover {
+    color: #45a049;
 }
 
 /* Sign In Page */
@@ -567,8 +598,10 @@ textarea {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
+    color: #333;
 }
 
+/* Input Fields */
 #signInForm input {
     width: 100%;
     padding: 10px;
@@ -576,25 +609,46 @@ textarea {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
+/* Input Focus */
+#signInForm input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Submit Button */
 #signInForm button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
+#signInForm button:hover {
+    background-color: #45a049;
+}
+
+/* Link Styling */
 #signInForm a {
     display: block;
     text-align: center;
     margin-top: 15px;
     text-decoration: none;
     color: #4CAF50;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#signInForm a:hover {
+    color: #45a049;
 }
 
 /* Footer */
