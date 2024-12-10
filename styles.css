@@ -696,6 +696,53 @@ textarea {
     color: #45a049;
 }
 
+/* Account page */
+.account-section {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.membership-card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.membership-card h3 {
+    font-size: 20px;
+    color: #f76c6c;
+}
+
+.membership-card p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.btn-upgrade,
+.btn-renew {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.btn-upgrade:hover,
+.btn-renew:hover {
+    background-color: #45a049;
+}
+
+.download-link {
+    color: #f76c6c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 /* Footer */
 footer {
     background-color: #f4f4f4; /* Light gray background */

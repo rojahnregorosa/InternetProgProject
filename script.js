@@ -171,3 +171,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+// Account page
