@@ -8,7 +8,7 @@ Welcome to Ignite Gym's official website! This project showcases a modern, respo
 
 ### General
 - **Responsive Design**: Optimized for desktop and mobile devices.
-- **Modern UI/UX**: A visually appealing and user-friendly interface.
+- **Modern UI**: A visually appealing and user-friendly interface.
 
 ### Pages
 1. **Home Page**:
