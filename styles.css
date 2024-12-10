@@ -697,6 +697,10 @@ textarea {
 }
 
 /* Account page */
+.account-main {
+    margin-top: 150px; 
+}
+
 .account-section {
     max-width: 800px;
     margin: 50px auto;

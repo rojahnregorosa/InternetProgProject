@@ -173,3 +173,41 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Account page
+document.addEventListener("DOMContentLoaded", function () {
+    const accountName = document.getElementById("account-name"); // Span to display user's name
+    const membershipType = document.getElementById("membership-type"); // Span to display membership type
+    const membershipEndDate = document.getElementById("membership-end-date"); // Span to display membership end date
+
+    // Check if a user is logged in
+    const loggedInUser = sessionStorage.getItem("loggedInUser");
+    const currentPage = window.location.pathname.split("/").pop(); // Get current page name
+
+    // Redirect to index.html only if on the account page and user is not logged in
+    if (!loggedInUser && currentPage === "account.html") {
+        window.location.href = "index.html";
+        return; // Prevent further execution
+    }
+
+    if (loggedInUser) {
+        const user = JSON.parse(loggedInUser);
+
+        // Set welcome message
+        if (accountName) {
+            accountName.innerHTML = `WELCOME <span style="color: #f76c6c;">${user.name.toUpperCase()}</span>`;
+        }
+
+        // Set membership type
+        if (membershipType) {
+            // Capitalize the first letter and set the text in bold
+            membershipType.innerHTML = `<strong>${user.membership.charAt(0).toUpperCase() + user.membership.slice(1)}</strong>`;
+        }
+
+        // Calculate and set membership end date (1 year after signup)
+        if (membershipEndDate) {
+            const signupDate = new Date();
+            const endDate = new Date(signupDate.setFullYear(signupDate.getFullYear() + 1));
+            membershipEndDate.textContent = endDate.toISOString().split("T")[0]; // Format as YYYY-MM-DD
+        }
+    }
+});
+
