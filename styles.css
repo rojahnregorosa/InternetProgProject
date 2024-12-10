@@ -475,12 +475,12 @@ header .btn-signin:hover {
     background-color: #f44242;
 }
 
-.about-image {
+.about-video {
     flex: 1;
     max-width: 600px;
 }
 
-.about-image img {
+.about-video iframe {
     width: 100%;
     border-radius: 8px;
 }
