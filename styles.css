@@ -23,15 +23,16 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
 }
 
-header .logo {
+header #logo {
     font-size: 32px;
     font-weight: bold;
     margin-left: 20px;
     color: #f76c6c;
+    text-decoration: none;
 }
 
-header .logo:hover {
-    text-decoration: none;
+header #logo:hover {
+    color: #f44242;
 }
 
 header nav {
