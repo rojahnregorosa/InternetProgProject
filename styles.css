@@ -23,15 +23,16 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
 }
 
-header .logo {
+header #logo {
     font-size: 32px;
     font-weight: bold;
     margin-left: 20px;
     color: #f76c6c;
+    text-decoration: none;
 }
 
-header .logo:hover {
-    text-decoration: none;
+header #logo:hover {
+    color: #f44242;
 }
 
 header nav {
@@ -45,8 +46,12 @@ header .nav-links {
     margin-right: 20px;
 }
 
+/* Align the Navigation Links */
 header .nav-links li {
-    margin: 0 15px;
+    display: flex;
+    align-items: center; /* Ensure all nav items are vertically aligned */
+    height: 100%; /* Match the header height */
+    padding: 0 10px; /* Adjust spacing for consistency */
 }
 
 header .nav-links a:not(.btn-signup):not(.btn-signin) {
@@ -64,14 +69,54 @@ header .btn-signup,
 header .btn-signin {
     background: #f44242;
     color: #fff;
-    padding: 16px 16px;
+    padding: 12px 12px;
     border-radius: 5px;
     text-decoration: none;
     transition: all 0.3s ease;
+    margin-right: 5px;
 }
 
 header .btn-signup:hover,
 header .btn-signin:hover {
+    background: #f76c6c;
+}
+
+#user-info {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    height: 100%; 
+    padding: 0 15px; 
+}
+
+#user-name {
+    font-size: 16px; 
+    font-weight: normal;
+    color: #222;
+    line-height: 1.6; 
+    padding: 0; 
+    text-decoration: none; 
+}
+
+#user-name:hover {
+    color: #f76c6c; 
+    cursor: pointer;
+}
+
+/* Logout Button Styling */
+.btn-logout {
+    background: #f44242;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px; 
+    cursor: pointer;
+    line-height: 1.6; 
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
     background: #f76c6c;
 }
 
@@ -493,6 +538,162 @@ textarea {
 
 .submit-btn:hover {
     background: #f76c6c;
+}
+
+/* Sign Up Page */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+#signUpForm {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#signUpForm h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input Fields */
+#signUpForm input,
+#signUpForm select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Input Focus */
+#signUpForm input:focus,
+#signUpForm select:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Dropdown Styling */
+#signUpForm select {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Submit Button */
+#signUpForm button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#signUpForm button:hover {
+    background-color: #45a049;
+}
+
+/* Link Styling */
+#signUpForm a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#signUpForm a:hover {
+    color: #45a049;
+}
+
+/* Sign In Page */
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+#signInForm {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#signInForm h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input Fields */
+#signInForm input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Input Focus */
+#signInForm input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Submit Button */
+#signInForm button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#signInForm button:hover {
+    background-color: #45a049;
+}
+
+/* Link Styling */
+#signInForm a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#signInForm a:hover {
+    color: #45a049;
 }
 
 /* Footer */

@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Home</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
-    <script src='main.js'></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="logo">Ignite Gym</div>
+            <a href="index.html" id="logo">Ignite Gym</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="#signup" class="btn-signup">Sign Up</a></li>
-                <li><a href="#signin" class="btn-signin">Sign In</a></li>
+    
+                <!-- User Info Section (Hidden by Default) -->
+                <li id="user-info" style="display: none;"> 
+                    <span id="user-name"></span>
+                    <button id="logout-btn" class="btn-logout">Logout</button>
+                </li>
+    
+                <!-- Auth Links Section (Visible by Default) -->
+                <li id="auth-links">
+                    <a href="signup.html" class="btn-signup">Sign Up</a>
+                    <a href="signin.html" class="btn-signin">Sign In</a>
+                </li>
             </ul>
         </nav>
-    </header>
+    </header>    
 
     <main>
         <!-- Hero Section -->
@@ -32,7 +39,7 @@
             <div class="hero-content">
                 <h1>Surpass your limits</h1>
                 <p>Get the best facilities from us to support your health and fitness.</p>
-                <a href="#pricing" class="btn">Get Started</a>
+                <a href="signup.html" class="btn">Get Started</a> 
             </div>
         </section>
 
@@ -91,9 +98,9 @@
                     <tfoot>
                         <tr>
                             <td></td>
-                            <td><a href="#signup" class="btn">Get Started</a></td>
-                            <td><a href="#signup" class="btn">Get Started</a></td>
-                            <td><a href="#signup" class="btn">Get Started</a></td>
+                            <td><a href="signup.html" class="btn">Get Started</a></td>
+                            <td><a href="signup.html" class="btn">Get Started</a></td>
+                            <td><a href="signup.html" class="btn">Get Started</a></td> 
                         </tr>
                     </tfoot>
                 </table>
@@ -111,7 +118,7 @@
                     <li>&#10003; New saunas in every locker room</li>
                     <li>&#10003; New boxing zone</li>
                 </ul>
-                <a href="#" class="btn-red">Join Now →</a>
+                <a href="signup.html" class="btn-red">Join Now →</a>
             </div>
             <div class="reasons-image">
                 <img src="images/02-GymPic.jpg" alt="Gym equipment">
@@ -122,7 +129,7 @@
         <section class="subscribe-section">
             <div class="subscribe-container">
                 <h2>Get the latest news and updates</h2>
-                <form class="subscribe-form">
+                <form class="subscribe-form" action="signup.html">
                     <input type="email" placeholder="Enter your email" required />
                     <button type="submit">Subscribe</button>
                 </form>
@@ -154,6 +161,7 @@
             <p>Copyright © Ignite Gym. All rights reserved.</p>
         </div>
     </footer>
+    <script src='script.js'></script>
 </body>
 
 </html>

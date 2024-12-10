@@ -7,24 +7,32 @@
     <title>Contact Us</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
-    <script src='main.js'></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="logo">Ignite Gym</div>
+            <a href="index.html" id="logo">Ignite Gym</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="index.html">Pricing</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="#signup" class="btn-signup">Sign Up</a></li>
-                <li><a href="#signin" class="btn-signin">Sign In</a></li>
+    
+                <!-- User Info Section (Hidden by Default) -->
+                <li id="user-info" style="display: none;"> 
+                    <span id="user-name"></span>
+                    <button id="logout-btn" class="btn-logout">Logout</button>
+                </li>
+    
+                <!-- Auth Links Section (Visible by Default) -->
+                <li id="auth-links">
+                    <a href="signup.html" class="btn-signup">Sign Up</a>
+                    <a href="signin.html" class="btn-signin">Sign In</a>
+                </li>
             </ul>
         </nav>
-    </header>
+    </header>    
 
     <main>
         <!-- Hero Section -->
@@ -92,6 +100,7 @@
             <p>Copyright © Ignite Gym. All rights reserved.</p>
         </div>
     </footer>
+    <script src='script.js'></script>
 </body>
 
 </html>
