@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
+// Contact form
 document.addEventListener("DOMContentLoaded", function () {
     // Select the form and the submit button
     const contactForm = document.querySelector("#contact-form-section form");
@@ -141,3 +141,33 @@ document.addEventListener("DOMContentLoaded", function () {
     submitButton.addEventListener("click", handleSubmit);
 });
 
+// Show user's name in header
+document.addEventListener("DOMContentLoaded", function () {
+    const authLinks = document.getElementById("auth-links"); // Container for sign-up and sign-in links
+    const userInfo = document.getElementById("user-info"); // Container for user info and logout
+    const userNameSpan = document.getElementById("user-name"); // Span to show user's name
+    const logoutBtn = document.getElementById("logout-btn"); // Logout button
+
+    // Check if a user is logged in
+    const loggedInUser = sessionStorage.getItem("loggedInUser");
+    if (loggedInUser) {
+        const user = JSON.parse(loggedInUser);
+        userNameSpan.textContent = user.name; // Set the user's name
+        if (authLinks) authLinks.style.display = "none"; // Hide sign-up and sign-in links
+        if (userInfo) userInfo.style.display = "flex"; // Show user info and logout button
+    } else {
+        // If not logged in, show the sign-up and sign-in links and hide user info
+        if (authLinks) authLinks.style.display = "flex";
+        if (userInfo) userInfo.style.display = "none";
+    }
+
+    // Logout functionality
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", function () {
+            sessionStorage.removeItem("loggedInUser"); // Remove logged-in user data
+            if (authLinks) authLinks.style.display = "flex"; // Show sign-up and sign-in links
+            if (userInfo) userInfo.style.display = "none"; // Hide user info and logout button
+            window.location.href = "index.html"; // Redirect to home page
+        });
+    }
+});

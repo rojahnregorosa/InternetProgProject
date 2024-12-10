@@ -45,8 +45,12 @@ header .nav-links {
     margin-right: 20px;
 }
 
+/* Align the Navigation Links */
 header .nav-links li {
-    margin: 0 15px;
+    display: flex;
+    align-items: center; /* Ensure all nav items are vertically aligned */
+    height: 100%; /* Match the header height */
+    padding: 0 10px; /* Adjust spacing for consistency */
 }
 
 header .nav-links a:not(.btn-signup):not(.btn-signin) {
@@ -64,14 +68,54 @@ header .btn-signup,
 header .btn-signin {
     background: #f44242;
     color: #fff;
-    padding: 16px 16px;
+    padding: 12px 12px;
     border-radius: 5px;
     text-decoration: none;
     transition: all 0.3s ease;
+    margin-right: 5px;
 }
 
 header .btn-signup:hover,
 header .btn-signin:hover {
+    background: #f76c6c;
+}
+
+#user-info {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    height: 100%; 
+    padding: 0 15px; 
+}
+
+#user-name {
+    font-size: 16px; 
+    font-weight: normal;
+    color: #222;
+    line-height: 1.6; 
+    padding: 0; 
+    text-decoration: none; 
+}
+
+#user-name:hover {
+    color: #f76c6c; 
+    cursor: pointer;
+}
+
+/* Logout Button Styling */
+.btn-logout {
+    background: #f44242;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px; 
+    cursor: pointer;
+    line-height: 1.6; 
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
     background: #f76c6c;
 }
 
